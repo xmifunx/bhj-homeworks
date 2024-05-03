@@ -19,7 +19,9 @@ class Game {
   registerEvents() {
     this.currentSymbol = this.container.querySelector('.symbol_current');
     this.inSymbol = document.onkeyup = (event) => {
-        if (event.key.toLowerCase().charCodeAt(0) === this.currentSymbol.textContent.toLowerCase().charCodeAt(0)) { 
+        console.log(event.key);
+        console.log(this.currentSymbol.textContent);
+        if (event.key.toLowerCase() == this.currentSymbol.textContent.toLowerCase()) { 
             this.success();
         } else {
             this.fail();
